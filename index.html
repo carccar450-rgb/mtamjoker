@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#FF6600">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>قصابية ومشويات علي الجد</title>
+    <title>مطعم نموذجي جوكر</title>
     <style>
         body { font-family: Arial, sans-serif; background: #fdfbf9; padding: 10px; direction: rtl; margin: 0; padding-bottom: 300px; }
         .card { background: white; width: 100%; max-width: 500px; margin: auto; padding: 15px; border-radius: 20px; border: 2px solid #FF6600; }
@@ -33,7 +33,7 @@
 <body>
 
 <div class="card">
-    <div class="header">🍊 قصابية ومشويات علي الجد</div>
+    <div class="header">🍊 مطعم نموذجي جوكر</div>
     <div id="m-body"></div>
     <input type="text" id="c-name" placeholder="اسم الزبون الكريم">
     <input type="text" id="c-addr" placeholder="العنوان">
@@ -152,7 +152,7 @@ function update() {
 function sendWA() {
     let n = document.getElementById('c-name').value, a = document.getElementById('c-addr').value, nt = document.getElementById('c-note').value;
     if (!n || !a) return alert("يرجى إكمال البيانات");
-    let msg = `*طلب جديد من علي الجد*\n👤 الاسم: ${n}\n📍 العنوان: ${a}\n📝 ملاحظات: ${nt}\n\n🍴 الطلبات:\n`;
+    let msg = `*طلب جديد من مطعم نموذجي جوكر*\n👤 الاسم: ${n}\n📍 العنوان: ${a}\n📝 ملاحظات: ${nt}\n\n🍴 الطلبات:\n`;
     items.forEach((it, i) => { if (cart[i] > 0) msg += `- ${it.n} (${L[it.t][cart[i]]})\n`; });
     window.open("https://wa.me/9647807466488?text=" + encodeURIComponent(msg + "\n💰 المجموع: " + document.getElementById('final-total').innerText + " د.ع"));
 }
